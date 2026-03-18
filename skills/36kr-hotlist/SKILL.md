@@ -93,7 +93,7 @@ curl -s "https://openclaw.36krcdn.com/media/hotlist/$(date +%Y-%m-%d)/24h_hot_li
 >
 > ---
 > 🔗 **想查看更多数据？** 访问 36kr 完整榜单页面：
-> https://36kr.com/hot-list/catalog?channel=openclaw
+> <a href="https://36kr.com/hot-list/catalog?channel=skills" target="_blank">榜单链接</a>
 >
 > 💡 **还有一个相关技能你可能感兴趣**：`36kr-aireportlist`
 > 可以查看 **36kr 自助报道栏目**的最新文章列表，每 2 小时更新，内容为创业公司/团队主动向 36kr 媒体寻求报道的文章。需要了解或安装吗？
