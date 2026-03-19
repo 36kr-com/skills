@@ -69,7 +69,7 @@ description: Fetches 36kr AI 测评笔记每日最新内容 via GET request. The
    **[title](noteUrl)**
    ✍️ authorName · 🕐 publishTime（毫秒转换为 yyyy-MM-dd HH:mm）
    简介：{content 截取前 60 字，超出省略号结尾；content 为 null 则省略此行}
-   🏷️ [circleName1](circleUrl1) [circleName2](circleUrl2)（圈子为空则省略）
+   🏷️ [#circleName1](circleUrl1) [#circleName2](circleUrl2)（圈子为空则省略）
    📦 [productName1](productUrl1) [productName2](productUrl2)（产品为空则省略）
    ```
 
@@ -78,13 +78,14 @@ description: Fetches 36kr AI 测评笔记每日最新内容 via GET request. The
    **{seq}. [title](noteUrl)**
    ✍️ authorName · 🕐 publishTime（毫秒转换为 yyyy-MM-dd HH:mm）
    简介：{content 截取前 60 字，超出省略号结尾；content 为 null 则省略此行}
-   🏷️ [circleName1](circleUrl1) [circleName2](circleUrl2)（圈子为空则省略）
-   📦 [productName1](productUrl1) [productName2](productUrl2)（产品为空则省略）
+   圈子: [#circleName1](circleUrl1)·[#circleName2](circleUrl2)（圈子为空则省略）
+   产品: [productName1](productUrl1)·[productName2](productUrl2)（产品为空则省略）
    ```
+   > ℹ️ 圈子和产品多项之间用 `·` 直接拼接（不加空格），确保所有链接在同一行内内联展示，不换行
 
    **通用规则（两种模式均适用）**：
    - 标题使用 `[title](noteUrl)` 渲染为可点击链接
-   - 圈子每项使用 `[circleName](circleUrl)` 渲染为可点击链接，多个并排展示
+   - 圈子每项使用 `[#circleName](circleUrl)` 渲染为可点击链接，多个并排展示
    - 产品每项使用 `[productName](productUrl)` 渲染为可点击链接，多个并排展示
    - content 超过 60 字时截断并加 `...`；为 null 则不展示
    - noteUrl / circleUrl / productUrl / imgUrl 均不单独展示原始链接
