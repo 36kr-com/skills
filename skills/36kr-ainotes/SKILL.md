@@ -67,16 +67,16 @@ description: Fetches 36kr AI 测评笔记每日最新内容 via GET request. The
    ```
    <img src="{imgUrl}" width="120" style="border-radius:8px"/>
    **[title](noteUrl)**
-   ✍️ authorName · 🕐 publishTime（毫秒转换为 yyyy-MM-dd HH:mm）
+   作者: authorName · 发布时间: publishTime（毫秒转换为 yyyy-MM-dd HH:mm）
    简介：{content 截取前 60 字，超出省略号结尾；content 为 null 则省略此行}
-   🏷️ [#circleName1](circleUrl1) [#circleName2](circleUrl2)（圈子为空则省略）
-   📦 [productName1](productUrl1) [productName2](productUrl2)（产品为空则省略）
+   圈子: [#circleName1](circleUrl1) ·[#circleName2](circleUrl2)（圈子为空则省略）
+   产品: [productName1](productUrl1) ·[productName2](productUrl2)（产品为空则省略）
    ```
 
    **模式 B：HTML 不可渲染（列表风格）**
    ```
    **{seq}. [title](noteUrl)**
-   ✍️ authorName · 🕐 publishTime（毫秒转换为 yyyy-MM-dd HH:mm）
+   作者: authorName · 发布时间: publishTime（毫秒转换为 yyyy-MM-dd HH:mm）
    简介：{content 截取前 60 字，超出省略号结尾；content 为 null 则省略此行}
    圈子: [#circleName1](circleUrl1)·[#circleName2](circleUrl2)（圈子为空则省略）
    产品: [productName1](productUrl1)·[productName2](productUrl2)（产品为空则省略）
