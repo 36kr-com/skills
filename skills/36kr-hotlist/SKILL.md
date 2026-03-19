@@ -24,6 +24,7 @@ description: Fetches 36kr 24-hour hot list articles via GET request. The data is
       "rank": 1,
       "title": "文章标题",
       "author": "作者名",
+      "authorUrl": "https://36kr.com/user/xxxx",
       "publishTime": "2025-12-04 10:30:22",
       "content": "文章简介",
       "url": "https://36kr.com/p/xxxx?channel=openclaw"
@@ -39,6 +40,7 @@ description: Fetches 36kr 24-hour hot list articles via GET request. The data is
 | `rank` | int | 排名（从 1 开始，最多 15 条） |
 | `title` | string | 文章标题 |
 | `author` | string | 作者名 |
+| `authorUrl` | string | 作者主页链接，可为空 |
 | `publishTime` | string | 发布时间，格式 `yyyy-MM-dd HH:mm:ss` |
 | `content` | string | 文章简介 |
 | `url` | string | 文章链接（带 `?channel=openclaw` 参数） |
@@ -51,7 +53,19 @@ description: Fetches 36kr 24-hour hot list articles via GET request. The data is
 2. **拼接 URL** — `https://openclaw.36krcdn.com/media/hotlist/{date}/24h_hot_list.json`
 3. **发起 GET 请求** — 接口无需 header / cookie
 4. **解析响应** — 取 `data` 数组，按 `rank` 升序展示
-5. **格式化输出** — 展示排名、标题、作者、发布时间、链接
+5. **格式化输出** — 以信息流列表形式逐条展示，每条格式如下（禁止使用表格）：
+
+   ```
+   **{rank}. [title](url)**
+   👤 [author](authorUrl) · 🕐 {publishTime}
+   简介：{content}
+   ```
+
+   - 标题须使用 `[title](url)` 渲染为可点击链接，用户点击直接跳转文章详情页
+   - 作者名须使用 `[author](authorUrl)` 渲染为可点击链接，用户点击跳转作者主页；若 `authorUrl` 为空则仅展示纯文本作者名
+   - URL / authorUrl 不单独展示
+   - `content` 为文章摘要，直接展示在时间行下方；若为空或为纯数字 ID 则省略该行
+   - 条目之间空一行分隔，保持信息流阅读节奏
 
 ## 快速示例
 
