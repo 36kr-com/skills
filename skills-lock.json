@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "skills": {
+    "36kr-hotlist": {
+      "source": "36kr-com/skills",
+      "sourceType": "github",
+      "computedHash": "e0a73eaa64780553038944df8d7452cb5adccc43a51f9b1ede2789306f83a5af"
+    },
+    "36kr-aireportlist": {
+      "source": "36kr-com/skills",
+      "sourceType": "github",
+      "computedHash": "b3f912c8a74e1d620b489f55c3e9071da2b8cc76f04e5a91bc7d384e20f6c1d9"
+    },
+    "36kr-ainotes": {
+      "source": "36kr-com/skills",
+      "sourceType": "github",
+      "computedHash": "c7a25db4e83f916d042c77b31e4f802ab6d9ee5cf18a7b43dc5e096f31a84d72"
+    }
+  }
+}

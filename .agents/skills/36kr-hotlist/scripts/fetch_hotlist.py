@@ -10,7 +10,7 @@ fetch_hotlist.py — 36kr 24小时热榜查询工具
     python fetch_hotlist.py --csv out.csv       # 导出 CSV
 
 依赖:
-    pip install httpx==0.27.0
+    pip install httpx
 """
 
 import argparse
@@ -22,7 +22,7 @@ import sys
 try:
     import httpx
 except ImportError:
-    print("[ERROR] 缺少依赖，请先执行: pip install httpx==0.27.0")
+    print("[ERROR] 缺少依赖，请先执行: pip install httpx")
     sys.exit(1)
 
 BASE_URL = "https://openclaw.36krcdn.com/media/hotlist/{date}/24h_hot_list.json"
